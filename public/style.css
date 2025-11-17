@@ -388,14 +388,6 @@ a:hover {
   gap: 0.5rem;
 }
 
-
-
-
-
-/* =========================================
-   PART 2: CARDS, FORMS, & ANIMATIONS
-   ========================================= */
-
 /* --- MODERN CARDS --- */
 
 .card-modern {
@@ -612,7 +604,7 @@ label {
 
 .status-success { color: #28a745; }
 .status-error { color: #dc3545; }
-.status-warning { color: #fd7e14; }
+.status-warning { color: #fd7e14; } /* CORRECTED: Added dot */
 .status-info { color: var(--brand); }
 
 /* Collapsible Status Log Icon */
@@ -622,12 +614,6 @@ label {
 a[aria-expanded="true"] .status-log-chevron {
   transform: rotate(180deg);
 }
-
-
-
-/* =========================================
-   PART 3: CALCULATOR UI, PROFILE MANAGER, & MODALS
-   ========================================= */
 
 /* --- MODERN CALCULATOR SECTION --- */
 
@@ -944,12 +930,6 @@ a[aria-expanded="true"] .status-log-chevron {
     }
 }
 
-
-
-/* =========================================
-   PART 4: LIGHTBOX, DEVELOPER SECTION, & FIXES
-   ========================================= */
-
 /* --- IMAGE LIGHTBOX STYLES --- */
 
 .zoomable-image-container {
@@ -1184,10 +1164,266 @@ a[aria-expanded="true"] .status-log-chevron {
 
 /* --- DARK MODE FIXES --- */
 
-[data-theme="dark"] #faq .lead.text-muted {
+[data-theme="dark"] {
+  --text: #e5e7eb;
+  --text-light: #d1d5db;
+  --muted: #9ca3af;
+}
+[data-theme="dark"] .text-muted {
+  color: var(--muted) !important;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(180deg, #0b0e13 0%, #0f1320 70%);
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .navbar-premium {
+  background-color: var(--header-bg-dark);
+  border-bottom: 1px solid var(--header-border-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .navbar-premium .nav-link {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .navbar-premium .nav-link:hover {
+  background-color: var(--nav-link-hover-bg-dark);
+  color: #fff;
+}
+
+[data-theme="dark"] .navbar-premium .nav-link.active {
+  background-color: var(--nav-link-hover-bg-dark);
+  color: #fff !important;
+}
+
+[data-theme="dark"] .btn-icon-toggle {
+  background-color: var(--nav-link-hover-bg-dark);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .btn-icon-toggle:hover {
+  background-color: var(--brand);
+  color: #fff;
+}
+
+[data-theme="dark"] .navbar-premium .hamburger-icon span {
+  background: #fff;
+}
+
+@media (max-width: 991.98px) {
+  [data-theme="dark"] .navbar-premium .navbar-collapse {
+    background-color: #1a2030;
+    border-color: var(--header-border-dark);
+  }
+  [data-theme="dark"] .navbar-premium .nav-item-theme-toggle {
+    border-top: 1px solid var(--header-border-dark);
+  }
+}
+
+[data-theme="dark"] .card-modern {
+  background: rgba(15, 29, 64, 0.8);
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .card-modern .card-header {
+  background: linear-gradient(135deg, rgba(122, 106, 216, 0.3), rgba(122, 106, 216, 0.15));
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .lead {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .calculator-section-modern .text-muted {
     color: var(--text-light) !important;
 }
 
+[data-theme="dark"] .subject-row {
+  background: rgba(26, 31, 46, 0.8);
+  border-color: rgba(122, 106, 216, 0.3);
+}
+
+[data-theme="dark"] label {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .form-control, [data-theme="dark"] .form-select {
+  background: rgba(11, 16, 32, 0.8);
+  color: #f1f5f9;
+  border-color: rgba(122, 106, 216, 0.3);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .form-text {
+  color: var(--muted);
+}
+
+[data-theme="dark"] .input-group-text {
+  background: rgba(31, 41, 55, 0.8);
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] a {
+  color: rgb(158, 141, 240);
+}
+
+[data-theme="dark"] a:hover {
+  color: #9f8df0;
+}
+
+[data-theme="dark"] .status-log {
+  background: rgba(26, 32, 48, 0.8);
+}
+
+[data-theme="dark"] .status-line {
+  border-bottom-color: rgba(45, 55, 72, 0.5);
+}
+
+[data-theme="dark"] .gpa-result-card-premium {
+  background: rgba(26, 32, 48, 0.8);
+}
+
+[data-theme="dark"] .semester-card {
+  background: rgba(26, 32, 48, 0.8);
+}
+
+[data-theme="dark"] .course-table th,
+[data-theme="dark"] .course-table td {
+  border-bottom-color: rgba(45, 55, 72, 0.5);
+}
+
+[data-theme="dark"] .course-table th {
+  background: rgba(122, 106, 216, 0.1);
+}
+
+[data-theme="dark"] .add-course-form {
+  background: rgba(26, 31, 46, 0.8);
+}
+
+[data-theme="dark"] .loading-container {
+  background: linear-gradient(135deg, rgba(122, 106, 216, 0.15), rgba(122, 106, 216, 0.08));
+}
+
+[data-theme="dark"] .grade-A { background-color: rgba(21, 128, 61, 0.3); color: #86efac; }
+[data-theme="dark"] .grade-B { background-color: rgba(30, 64, 175, 0.3); color: #93c5fd; }
+[data-theme="dark"] .grade-C { background-color: rgba(146, 64, 14, 0.3); color: #fed7aa; }
+[data-theme="dark"] .grade-D { background-color: rgba(153, 27, 27, 0.3); color: #fecaca; }
+[data-theme="dark"] .grade-F { background-color: rgba(55, 65, 81, 0.3); color: #d1d5db; }
+
+[data-theme="dark"] .modal-content {
+    background: rgba(26, 32, 48, 0.95);
+    color: #e5e7eb;
+}
+[data-theme="dark"] .modal-header {
+    background: linear-gradient(135deg, rgba(122, 106, 216, 0.3), rgba(122, 106, 216, 0.15));
+    border-bottom-color: rgba(45, 55, 72, 0.5);
+}
+[data-theme="dark"] .modal-header .btn-close {
+    filter: invert(1);
+}
+[data-theme="dark"] .alert-info {
+  background-color: rgba(23, 162, 184, 0.2);
+  border-color: rgba(23, 162, 184, 0.3);
+  color: #71d4f0;
+}
+[data-theme="dark"] .alert-warning {
+  background-color: rgba(255, 193, 7, 0.2);
+  border-color: rgba(255, 193, 7, 0.3);
+  color: #ffd351;
+}
+
+[data-theme="dark"] .text-body-secondary {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] .btn-primary-action {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .cursor-dot {
+  mix-blend-mode: screen;
+}
+
+/* Action Hub Dark Mode */
+[data-theme="dark"] .action-hub-nav-pills {
+  background-color: rgba(122, 106, 216, 0.2);
+}
+[data-theme="dark"] .action-hub-content-wrapper {
+   /* Inherits card-modern styles usually, or can be specific */
+}
+
+/* B.Ed Tab Dark Mode */
+[data-theme="dark"] #bedTab {
+  border-bottom-color: rgba(122, 106, 216, 0.3);
+}
+[data-theme="dark"] #bedTab .nav-link.active {
+  color: #fff;
+}
+
+/* Footer Dark Mode */
+[data-theme="dark"] .premium-footer {
+  background-color: transparent;
+}
+
+/* Server Status Dark Mode */
+[data-theme="dark"] .server-status-indicator {
+  background-color: rgba(26, 32, 48, 0.7);
+  border: 1px solid #fff3;
+}
+[data-theme="dark"] .status-content-wrapper {
+  color: var(--muted);
+}
+[data-theme="dark"] .infinity-loader::before,
+[data-theme="dark"] .infinity-loader::after {
+  background: #9ca3af;
+}
+
+/* Popover Dark Mode */
+[data-theme="dark"] .popover {
+  background: rgba(26, 32, 48, 0.9);
+}
+[data-theme="dark"] .popover-header {
+  background: linear-gradient(135deg, rgba(122, 106, 216, 0.3), rgba(122, 106, 216, 0.15));
+  color: var(--text);
+  border-bottom-color: rgba(45, 55, 72, 0.5);
+}
+[data-theme="dark"] .popover-body {
+  color: var(--text-light);
+}
+
+/* Feature Cards Dark Mode */
+[data-theme="dark"] .why-choose-section {
+  background: transparent;
+}
+[data-theme="dark"] .feature-card {
+  background: rgba(15, 20, 34, 0.8);
+}
+[data-theme="dark"] .feature-card h5 {
+  color: #ffffff;
+}
+[data-theme="dark"] .feature-card p.text-muted {
+    color: var(--muted) !important;
+}
+[data-theme="dark"] .why-choose-section .lead.text-muted {
+    color: var(--text-light) !important;
+}
+
+/* FAQ & Modal Specific Dark Mode Fixes */
+[data-theme="dark"] #faq .lead.text-muted {
+    color: var(--text-light) !important;
+}
 [data-theme="dark"] #attendanceImportModal .text-muted {
     color: var(--text-light) !important;
+}
+[data-theme="dark"] .card-modern .card-header a[data-bs-toggle="collapse"] .text-body,
+[data-theme="dark"] .card-modern .card-header a[data-bs-toggle="collapse"] .text-body i {
+    color: var(--text) !important;
 }
