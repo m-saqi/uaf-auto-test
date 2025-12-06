@@ -9,7 +9,6 @@
   <meta name="application-name" content="UAF CGPA Calculator (M Saqlain)"/>
   <meta name="keywords" content="UAF CGPA Calculator, uaf cgpa calculator, cgpa calculator uaf, uaf gpa calculator, university of agriculture faisalabad cgpa calculator, uaf lms cgpa calculator, uaf cgpa calculator saqlain, uaf result calculator, uaf cgpa calculator by registration number, calculate uaf cgpa" />
   <meta name="author" content="Muhammad Saqlain - developer UAF CGPA Calculator" />
-  <meta name="theme-color" content="#7a6ad8">
   <link rel="canonical" href="https://uafcgpacalculator.vercel.app/" />
 
   <meta name="google-site-verification" content="google3e44586abf077c1e" />
@@ -38,7 +37,25 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#7a6ad8">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MJW7HPPS');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -89,7 +106,6 @@
         "sameAs": "https://uaf.edu.pk"
       },
       "sameAs": [
-        "httpsM_Saqlain_Akbar",
         "https://www.linkedin.com/in/muhammad-saqlain-akbar/"
       ],
       "knowsAbout": [
@@ -175,272 +191,20 @@
   }
   </script>
 
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MJW7HPPS');</script>
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="CWWh1lx4Kz/fCxT0UN7M0w" async></script>
-
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
-  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJW7HPPS"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="cursor-dot" id="cursorDot"></div>
-
   <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
-
-  <div class="modal fade course-details-modal" id="courseDetailsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="courseDetailsModalTitle">Course Details</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="courseDetailsModalBody"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="addCourseModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fa-solid fa-plus-circle me-2"></i>Add Custom Course</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="addCourseForm">
-            <input type="hidden" id="addCourseSemester">
-            <div class="mb-3">
-              <label for="courseCode" class="form-label">Course Code</label>
-              <input type="text" class="form-control" id="courseCode" placeholder="e.g., CHEM-101" required>
-            </div>
-            <div class="mb-3">
-              <label for="courseTitle" class="form-label">Course Title</label>
-              <input type="text" class="form-control" id="courseTitle" placeholder="e.g., Inorganic Chemistry" required>
-            </div>
-            <div class="row">
-              <div class="col-6 mb-3">
-                <label for="creditHours" class="form-label">Credit Hours</label>
-                <select class="form-select" id="creditHours" required>
-                  <option value="1">1</option><option value="2">2</option>
-                  <option value="3" selected>3</option><option value="4">4</option>
-                  <option value="5">5</option><option value="6">6</option>
-                  <option value="7">7</option><option value="8">8</option>
-                  <option value="9">9</option><option value="10">10</option>
-                </select>
-              </div>
-              <div class="col-6 mb-3">
-                <label for="courseMarks" class="form-label">Marks Obtained</label>
-                <input type="number" class="form-control" id="courseMarks" min="0" max="100" placeholder="e.g., 75" required>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary-action rounded-pill" id="saveCourseBtn">Add Course</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="renameProfileModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content shadow-lg">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fa-solid fa-pen-to-square me-2"></i>Rename Profile</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form id="renameProfileForm">
-            <div class="mb-3">
-              <label for="newProfileName" class="form-label">Profile Name</label>
-              <input type="text" class="form-control" id="newProfileName" required>
-              <div class="form-text">Give this profile a unique name (e.g., "My Final Year Prediction").</div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary-action rounded-pill" id="saveProfileNameBtn">Save Name</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="renameSemesterModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content shadow-lg">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fa-solid fa-pen-to-square me-2"></i>Rename Semester</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form id="renameSemesterForm">
-            <div class="mb-3">
-              <label for="newSemesterName" class="form-label">Semester Name</label>
-              <input type="text" class="form-control" id="newSemesterName" required>
-              <div class="form-text">Give this semester a unique name (e.g., "Final Year - Spring").</div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary-action rounded-pill" id="saveSemesterNameBtn">Save Name</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="attendanceImportModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-between align-items-center w-100">
-          <h5 class="modal-title mb-0" id="attendanceModalTitle"><i class="fa-solid fa-clipboard-user me-2"></i>Import Courses</h5>
-          <div class="d-flex align-items-center gap-3">
-            <span id="attendanceCourseCount" class="small text-muted"></span>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="toggleAllCourses" role="switch">
-              <label class="form-check-label small" for="toggleAllCourses">Show All</label>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-        </div>
-        <div class="modal-body">
-          <p class="text-muted small" id="attendanceModalDescription">The following courses were found in the Attendance System but not in your main LMS results. Select courses to import.</p>
-          <div class="d-flex justify-content-between align-items-center py-2 px-3 rounded mb-2 bg-light" style="background-color: rgba(122, 106, 216, 0.05);">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="toggleSelectAllCourses">
-              <label class="form-check-label fw-medium" for="toggleSelectAllCourses">Select All Visible</label>
-            </div>
-            <span id="attendanceSelectedCount" class="small fw-medium" style="color: var(--brand);">0 Selected</span>
-          </div>
-          <div id="attendanceCourseList"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary-action rounded-pill" id="importAttendanceCoursesBtn">Import Selected Courses</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="profileManagerModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fa-solid fa-users-gear me-2"></i>Profile Manager</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <div class="profile-manager-header d-flex justify-content-between align-items-center pb-3 border-bottom mb-3">
-            <h6 class="mb-0">Manage Your Saved Profiles</h6>
-            <div class="profile-manager-stats small text-muted">
-              <span id="profileCountStat">0 Profiles</span> | <span id="lastBackupStat">Last Backup: Never</span>
-            </div>
-          </div>
-          <div class="profile-manager-toolbar d-flex flex-wrap gap-2 align-items-center mb-3">
-            <div class="form-check me-2">
-              <input class="form-check-input" type="checkbox" id="selectAllProfiles">
-              <label class="form-check-label" for="selectAllProfiles">Select All</label>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary-action btn-sm dropdown-toggle rounded-3" type="button" id="bulkActionsBtn" data-bs-toggle="dropdown" aria-expanded="false" disabled>
-                Bulk Actions
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="bulkActionsBtn">
-                <li><a class="dropdown-item text-danger" href="#" id="deleteSelectedBtn"><i class="fa-solid fa-trash-can me-2"></i>Delete Selected</a></li>
-              </ul>
-            </div>
-            <div class="ms-auto d-flex gap-2">
-              <button class="btn btn-success-action btn-sm rounded-3" id="importProfilesBtnModal"><i class="fa-solid fa-upload me-2"></i>Import</button>
-              <button class="btn btn-info-action btn-sm rounded-3" id="exportProfilesBtnModal" disabled><i class="fa-solid fa-download me-2"></i>Export</button>
-            </div>
-          </div>
-          <ul class="profile-list list-unstyled" id="profileManagerList"></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade confirmation-modal" id="bedConfirmationModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body text-center">
-          <i class="fa-solid fa-graduation-cap mb-3 fs-1 text-primary"></i>
-          <h5 class="modal-title mb-2">B.Ed. Courses Detected</h5>
-          <p class="text-muted small">We found courses related to the B.Ed. (Bachelor of Education) program in your results.</p>
-          <p class="mb-0"><strong>Have you enrolled in the B.Ed. program?</strong></p>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary-action rounded-pill" id="bedConfirmNo">No, Show All</button>
-          <button type="button" class="btn btn-primary-action rounded-pill" id="bedConfirmYes">Yes, Separate B.Ed.</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade confirmation-modal" id="confirmationModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-      <div class="modal-content">
-        <div class="modal-body text-center">
-          <i class="fa-solid fa-triangle-exclamation mb-3 text-warning fs-1"></i>
-          <h5 class="modal-title mb-2" id="confirmationModalTitle">Are you sure?</h5>
-          <p id="confirmationModalBody" class="text-muted small">This action cannot be undone.</p>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal" id="confirmationCancelBtn">Cancel</button>
-          <button type="button" class="btn btn-danger-action rounded-pill" id="confirmationConfirmBtn">Confirm</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="restrictedAccessModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content border-0 shadow-lg" style="border-radius: 24px; overflow: hidden;">
-        <div class="modal-header border-0 text-white p-4" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
-          <h5 class="modal-title fw-bold"><i class="fa-solid fa-user-lock me-2"></i>Restricted Access</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 text-center bg-light">
-          <div class="mb-4 mt-2">
-            <div class="d-flex align-items-center justify-content-center mx-auto shadow-sm" style="width: 80px; height: 80px; border-radius: 50%; background: #fff;">
-              <i class="fa-solid fa-key fa-2x text-danger"></i>
-            </div>
-          </div>
-          <h5 class="fw-bold mb-2 text-dark">Pass Key Required</h5>
-          <p class="text-muted small mb-4 px-3">The academic record for this student is protected. Please enter the secure pass key to view results.</p>
-          <div class="form-floating mb-2 text-start">
-            <input type="password" class="form-control rounded-4" id="restrictedPassKey" placeholder="Enter Pass Key" style="border: 1px solid #e0e0e0;">
-            <label for="restrictedPassKey"><i class="fa-solid fa-lock me-2 small"></i>Pass Key</label>
-          </div>
-          <div id="passKeyError" class="text-danger small fw-bold text-start ms-2 shake-animation d-none">
-            <i class="fa-solid fa-circle-exclamation me-1"></i> Incorrect Pass Key
-          </div>
-        </div>
-        <div class="modal-footer border-0 bg-light justify-content-center pb-4 pt-0">
-          <button type="button" class="btn btn-secondary-action rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-danger rounded-pill px-4 shadow-sm" id="submitPassKeyBtn">Unlock Record <i class="fa-solid fa-arrow-right ms-2"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-premium">
     <div class="container">
@@ -448,9 +212,11 @@
         <span class="badge rounded-pill badge-brand">UAF</span>
         <span class="gradient-text">CGPA Calculator</span>
       </a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <div class="hamburger-icon"><span></span><span></span><span></span></div>
       </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="#Home"><i class="fa-solid fa-house me-2 d-lg-none"></i>Home</a></li>
@@ -458,6 +224,7 @@
           <li class="nav-item"><a class="nav-link" href="#features"><i class="fa-solid fa-star me-2 d-lg-none"></i>Features</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq"><i class="fa-solid fa-circle-question me-2 d-lg-none"></i>FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact-us"><i class="fa-solid fa-envelope me-2 d-lg-none"></i>Contact</a></li>
+          
           <li class="nav-item nav-item-theme-toggle ms-lg-3">
             <div class="theme-switch-wrapper-mobile d-lg-none">
               <input type="checkbox" id="themeToggleInput" class="theme-switch-input" />
@@ -478,7 +245,7 @@
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <span class="badge rounded-pill badge-brand mb-3">University of Agriculture Faisalabad (UAF)</span>
-            <h1 class="display-5 mb-3"><span class="hero-text-gradient fw-bold">UAF CGPA Calculator 2025</span> by <span class="hero-text-gradient">M Saqlain </span>- Automatic & Accurate</h1>
+            <h1 class="display-5 mb-3"><span class="hero-text-gradient" style="font-weight:bold;">UAF CGPA Calculator 2025</span> by <span class="hero-text-gradient">M Saqlain </span>- Automatic & Accurate</h1>
             <p class="lead mb-4">Enter your <strong>registration number</strong> to fetch your results directly from <strong>UAF LMS & Attendance System</strong>. The calculator will automatically compute your CGPA and Percentage based on <strong>UAF grading system</strong>.</p>
             <div class="d-flex gap-2">
               <a href="#Auto-Calculator" class="btn btn-primary-action btn-lg rounded-pill" style="font-size: 1.05rem; padding: 0.9rem;">
@@ -504,7 +271,7 @@
                   <li class="d-flex align-items-start gap-2 mb-2"><i class="fa-solid fa-check text-success mt-1"></i><div><strong>Instant & Automatic:</strong> Fetches official results from UAF LMS & Attendance System.</div></li>
                   <li class="d-flex align-items-start gap-2 mb-2"><i class="fa-solid fa-check text-success mt-1"></i><div><strong>Forecast & Edit:</strong> The only calculator to forecast future CGPA, and custom courses.</div></li>
                   <li class="d-flex align-items-start gap-2 mb-2"><i class="fa-solid fa-check text-success mt-1"></i><div><strong>100% Accurate:</strong> Correctly handles repeated courses (counting only the best attempt).</div></li>
-                  <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-check text-success mt-1"></i><div><strong>Premium PDF:</strong> Download professional transcript.</div></li>
+                  <li class="d-flex align-items-start gap-2"><i class="fa-solid fa-check text-success mt-1"></i><div><strong>Premium PDF:</strong> Download a clean, professional, and well-formatted unofficial transcript of your results with a single click.</div></li>
                 </ul>
               </div>
             </div>
@@ -519,12 +286,10 @@
         <span class="announcement-text"><i class="fa-solid fa-wand-magic-sparkles me-2"></i> Use the 'Forecast Semester' button to plan your future grades.</span>
         <span class="announcement-text"><i class="fa-solid fa-arrows-up-down-left-right me-2"></i> On desktop, you can drag & drop courses between semesters.</span>
         <span class="announcement-text"><i class="fa-solid fa-circle-info me-2"></i> Only the highest marks in a repeated course are counted towards your CGPA.</span>
-        <span class="announcement-text"><i class="fa-solid fa-wand-magic-sparkles me-2"></i> Use the 'Forecast Semester' button to plan your future grades.</span>
-        <span class="announcement-text"><i class="fa-solid fa-arrows-up-down-left-right me-2"></i> On desktop, you can drag & drop courses between semesters.</span>
       </div>
     </div>
 
-    <section class="py-5 pb-0" id="Auto-Calculator">
+    <section class="py-5" id="Auto-Calculator" style="padding-bottom: 0rem !important;">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-10">
@@ -532,12 +297,7 @@
               
               <div class="server-status-wrapper">
                 <div class="server-status-indicator shadow-sm">
-                  <div class="status-info-icon" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
-                    data-bs-placement="bottom" data-bs-title="Server Status"
-                    data-bs-content="<p class='mb-1'><strong>LMS:</strong> Main Result Portal</p><p class='mb-0'><strong>ATS:</strong> Attendance Portal</p>"
-                    data-bs-html="true">
-                    <i class="fa-solid fa-circle-info"></i>
-                  </div>
+                  <div class="status-info-icon" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-title="Server Status" data-bs-content="<p class='mb-1'><strong>LMS:</strong> Main Result Portal</p><p class='mb-0'><strong>ATS:</strong> Attendance Portal</p>" data-bs-html="true"><i class="fa-solid fa-circle-info"></i></div>
                   <div class="status-item" id="lms-status-item">
                     <div class="status-content-wrapper"><div class="infinity-loader"></div><span class="status-label">LMS</span></div>
                     <div class="status-dot" id="lms-status-dot"></div>
@@ -572,14 +332,9 @@
                             <div class="input-group-premium">
                               <span class="ps-3 text-muted"><i class="fa-solid fa-id-card fa-lg"></i></span>
                               <input type="text" class="form-control" id="registrationNumber" placeholder="Ag No. (e.g. 2020-ag-1234)" required>
-                              <button type="submit" class="btn btn-primary-action btn-action">
-                                <span class="d-none d-sm-inline">Fetch Result</span>
-                                <i class="fa-solid fa-arrow-right ms-sm-2"></i>
-                              </button>
+                              <button type="submit" class="btn btn-primary-action btn-action"><span class="d-none d-sm-inline">Fetch Result</span><i class="fa-solid fa-arrow-right ms-sm-2"></i></button>
                             </div>
-                            <div class="text-center mt-3">
-                              <small class="text-muted"><i class="fa-solid fa-shield-halved me-1"></i> Privacy Assured: We never store your data.</small>
-                            </div>
+                            <div class="text-center mt-3"><small class="text-muted"><i class="fa-solid fa-shield-halved me-1"></i> Privacy Assured: We never store your data.</small></div>
                           </form>
                         </div>
 
@@ -588,12 +343,8 @@
                             <p class="text-center text-muted mb-3 small">Select a saved profile to view details.</p>
                             <div class="input-group-premium">
                               <span class="ps-3 text-muted"><i class="fa-solid fa-users fa-lg"></i></span>
-                              <select class="form-select" id="profileSwitcher">
-                                <option value="">Select a profile...</option>
-                              </select>
-                              <button class="btn btn-secondary-action btn-action" type="button" id="openProfileManagerBtn" title="Settings">
-                                <i class="fa-solid fa-gear"></i>
-                              </button>
+                              <select class="form-select" id="profileSwitcher"><option value="">Select a profile...</option></select>
+                              <button class="btn btn-secondary-action btn-action" type="button" id="openProfileManagerBtn" title="Settings"><i class="fa-solid fa-gear"></i></button>
                             </div>
                           </div>
                           <div id="initialProfileUI">
@@ -634,12 +385,11 @@
               </div>
             </div>
 
-            <div id="resultContainer" class="result-container" style="display: none;">
+            <div id="resultContainer" class="result-container">
               <div class="gpa-result-card-premium fade-in-on-scroll">
-                <div class="student-info-header position-relative">
+                <div class="student-info-header">
                   <h2 class="mb-0 fw-bold" id="studentName"><i class="fa-solid fa-user-graduate me-2"></i>Student Name</h2>
                   <p class="mb-0 text-body-secondary" id="studentReg">Registration Number</p>
-                  <i class="fa-regular fa-copy copy-icon-btn" id="copyDetailsIconBtn" title="Copy Details"></i>
                 </div>
                 <div class="cgpa-dashboard">
                   <div class="cgpa-progress-circle">
@@ -654,25 +404,15 @@
                   </div>
                 </div>
                 <div class="secondary-stats">
-                  <div class="stat-item">
-                    <span class="stat-label">Percentage</span>
-                    <span class="stat-value" id="totalPercentage">0.00%</span>
-                  </div>
+                  <div class="stat-item"><span class="stat-label">Percentage</span><span class="stat-value" id="totalPercentage">0.00%</span></div>
                   <div class="stat-divider"></div>
-                  <div class="stat-item">
-                    <span class="stat-label">Total Marks</span>
-                    <span class="stat-value">
-                      <span id="totalMarksObtained">0</span><span id="totalMaxMarks" class="stat-sub-value">/ 0</span>
-                    </span>
-                  </div>
+                  <div class="stat-item"><span class="stat-label">Total Marks</span><span class="stat-value"><span id="totalMarksObtained">0</span><span id="totalMaxMarks" class="stat-sub-value">/ 0</span></span></div>
                 </div>
               </div>
 
               <div class="text-center fade-in-on-scroll" style="margin-top: 1.5rem;">
                 <p class="text-muted small mb-2">If some courses are not in LMS, you can find them in the Attendance System.</p>
-                <button id="fetchAttendanceBtn" class="btn btn-success-action" style="min-width: 220px; border-radius: var(--radius-btn);">
-                  <i class="fa-solid fa-clipboard-user me-2"></i>Attendance System
-                </button>
+                <button id="fetchAttendanceBtn" class="btn btn-success-action" style="min-width: 220px; border-radius: var(--radius-btn);"><i class="fa-solid fa-clipboard-user me-2"></i>Attendance System</button>
               </div>
 
               <div class="card card-modern mt-4 fade-in-on-scroll" id="gpaChartContainer" style="display: none;">
@@ -684,11 +424,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="collapse" id="gpaChartCollapse">
-                  <div class="card-body">
-                    <canvas id="gpaTrendChart"></canvas>
-                  </div>
-                </div>
+                <div class="collapse" id="gpaChartCollapse"><div class="card-body"><canvas id="gpaTrendChart"></canvas></div></div>
               </div>
 
               <div class="action-buttons-aligned justify-content-lg-between w-100 fade-in-on-scroll">
@@ -696,122 +432,36 @@
                 <button id="addForecastSemesterBtn" class="btn btn-info-action"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Forecast Semester</button>
               </div>
 
-              <div class="semester-results-container">
-                <div id="semesterResults" class="semester-grid"></div>
-              </div>
+              <div class="semester-results-container"><div id="semesterResults" class="semester-grid"></div></div>
             </div>
 
             <div id="bedResultContainer" style="display: none;">
               <nav class="nav nav-tabs nav-fill" id="bedTab" role="tablist">
-                <a class="nav-link active" id="bed-tab" data-bs-toggle="tab" href="#bed-tab-content" role="tab" aria-controls="bed-tab-content" aria-selected="true">
-                  <i class="fa-solid fa-graduation-cap me-2"></i>B.Ed. Program
-                </a>
-                <a class="nav-link" id="other-tab" data-bs-toggle="tab" href="#other-tab-content" role="tab" aria-controls="other-tab-content" aria-selected="false">
-                  <i class="fa-solid fa-book me-2"></i>Other Program
-                </a>
+                <a class="nav-link active" id="bed-tab" data-bs-toggle="tab" href="#bed-tab-content" role="tab" aria-controls="bed-tab-content" aria-selected="true"><i class="fa-solid fa-graduation-cap me-2"></i>B.Ed. Program</a>
+                <a class="nav-link" id="other-tab" data-bs-toggle="tab" href="#other-tab-content" role="tab" aria-controls="other-tab-content" aria-selected="false"><i class="fa-solid fa-book me-2"></i>Other Program</a>
               </nav>
-
               <div class="tab-content" id="bedTabContent">
                 <div class="tab-pane fade show active" id="bed-tab-content" role="tabpanel" aria-labelledby="bed-tab">
                   <div class="gpa-result-card-premium fade-in-on-scroll is-visible">
-                    <div class="student-info-header">
-                      <h2 class="mb-0 fw-bold" id="bed-studentName"></h2>
-                      <p class="mb-0 text-body-secondary" id="bed-studentReg"></p>
-                    </div>
-                    <div class="cgpa-dashboard">
-                      <div class="cgpa-progress-circle">
-                        <svg viewBox="0 0 36 36">
-                          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          <path id="bed-cgpaCircle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        </svg>
-                        <div class="cgpa-progress-text">
-                          <span id="bed-totalCgpa" class="cgpa-value">0.00</span>
-                          <span class="cgpa-label">B.Ed. CGPA</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="secondary-stats">
-                      <div class="stat-item"><span class="stat-label">Percentage</span><span class="stat-value" id="bed-totalPercentage">0.00%</span></div>
-                      <div class="stat-divider"></div>
-                      <div class="stat-item"><span class="stat-label">Total Marks</span><span class="stat-value"><span id="bed-totalMarksObtained">0</span><span id="bed-totalMaxMarks" class="stat-sub-value">/ 0</span></span></div>
-                    </div>
+                    <div class="student-info-header"><h2 class="mb-0 fw-bold" id="bed-studentName"></h2><p class="mb-0 text-body-secondary" id="bed-studentReg"></p></div>
+                    <div class="cgpa-dashboard"><div class="cgpa-progress-circle"><svg viewBox="0 0 36 36"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path id="bed-cgpaCircle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg><div class="cgpa-progress-text"><span id="bed-totalCgpa" class="cgpa-value">0.00</span><span class="cgpa-label">B.Ed. CGPA</span></div></div></div>
+                    <div class="secondary-stats"><div class="stat-item"><span class="stat-label">Percentage</span><span class="stat-value" id="bed-totalPercentage">0.00%</span></div><div class="stat-divider"></div><div class="stat-item"><span class="stat-label">Total Marks</span><span class="stat-value"><span id="bed-totalMarksObtained">0</span><span id="bed-totalMaxMarks" class="stat-sub-value">/ 0</span></span></div></div>
                   </div>
-                  <div class="text-center fade-in-on-scroll mt-4" style="margin-top: 1.5rem;">
-                    <button id="bed-fetchAttendanceBtn" class="btn btn-success-action btn-wide"><i class="fa-solid fa-clipboard-user me-2"></i>Attendance System</button>
-                  </div>
-                  <div class="card card-modern mt-4 fade-in-on-scroll" id="bedGpaChartContainer" style="display: none;">
-                    <div class="card-header p-0">
-                      <a href="#bedGpaChartCollapse" class="d-block text-decoration-none p-3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="bedGpaChartCollapse">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <h4 class="mb-0 text-body"><i class="fa-solid fa-chart-line me-2"></i>GPA Trend</h4>
-                          <i class="fa-solid fa-chevron-down text-body" id="bedGpaChartChevron"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="collapse" id="bedGpaChartCollapse">
-                      <div class="card-body">
-                        <canvas id="bedGpaTrendChart"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="action-buttons-aligned justify-content-lg-between w-100 fade-in-on-scroll">
-                    <button id="bed-downloadPdfBtn" class="btn btn-pdf-download"><i class="fa-solid fa-file-pdf me-2"></i>Download PDF</button>
-                    <button id="bed-addForecastSemesterBtn" class="btn btn-info-action"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Forecast Semester</button>
-                  </div>
-                  <div class="semester-results-container">
-                    <div id="bed-semesterResults" class="semester-grid"></div>
-                  </div>
+                  <div class="text-center fade-in-on-scroll" style="margin-top: 1.5rem;"><button id="bed-fetchAttendanceBtn" class="btn btn-success-action" style="min-width: 220px; border-radius: var(--radius-btn);"><i class="fa-solid fa-clipboard-user me-2"></i>Attendance System</button></div>
+                  <div class="card card-modern mt-4 fade-in-on-scroll" id="bedGpaChartContainer" style="display: none;"><div class="card-header p-0"><a href="#bedGpaChartCollapse" class="d-block text-decoration-none p-3" data-bs-toggle="collapse" role="button"><div class="d-flex justify-content-between align-items-center"><h4 class="mb-0 text-body"><i class="fa-solid fa-chart-line me-2"></i>GPA Trend</h4><i class="fa-solid fa-chevron-down text-body" id="bedGpaChartChevron"></i></div></a></div><div class="collapse" id="bedGpaChartCollapse"><div class="card-body"><canvas id="bedGpaTrendChart"></canvas></div></div></div>
+                  <div class="action-buttons-aligned justify-content-lg-between w-100 fade-in-on-scroll"><button id="bed-downloadPdfBtn" class="btn btn-pdf-download"><i class="fa-solid fa-file-pdf me-2"></i>Download PDF</button><button id="bed-addForecastSemesterBtn" class="btn btn-info-action"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Forecast Semester</button></div>
+                  <div class="semester-results-container"><div id="bed-semesterResults" class="semester-grid"></div></div>
                 </div>
-
                 <div class="tab-pane fade" id="other-tab-content" role="tabpanel" aria-labelledby="other-tab">
                   <div class="gpa-result-card-premium fade-in-on-scroll is-visible">
-                    <div class="student-info-header">
-                      <h2 class="mb-0 fw-bold" id="other-studentName"></h2>
-                      <p class="mb-0 text-body-secondary" id="other-studentReg"></p>
-                    </div>
-                    <div class="cgpa-dashboard">
-                      <div class="cgpa-progress-circle">
-                        <svg viewBox="0 0 36 36">
-                          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          <path id="other-cgpaCircle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        </svg>
-                        <div class="cgpa-progress-text">
-                          <span id="other-totalCgpa" class="cgpa-value">0.00</span>
-                          <span class="cgpa-label">CGPA</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="secondary-stats">
-                      <div class="stat-item"><span class="stat-label">Percentage</span><span class="stat-value" id="other-totalPercentage">0.00%</span></div>
-                      <div class="stat-divider"></div>
-                      <div class="stat-item"><span class="stat-label">Total Marks</span><span class="stat-value"><span id="other-totalMarksObtained">0</span><span id="other-totalMaxMarks" class="stat-sub-value">/ 0</span></span></div>
-                    </div>
+                    <div class="student-info-header"><h2 class="mb-0 fw-bold" id="other-studentName"></h2><p class="mb-0 text-body-secondary" id="other-studentReg"></p></div>
+                    <div class="cgpa-dashboard"><div class="cgpa-progress-circle"><svg viewBox="0 0 36 36"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path id="other-cgpaCircle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg><div class="cgpa-progress-text"><span id="other-totalCgpa" class="cgpa-value">0.00</span><span class="cgpa-label">CGPA</span></div></div></div>
+                    <div class="secondary-stats"><div class="stat-item"><span class="stat-label">Percentage</span><span class="stat-value" id="other-totalPercentage">0.00%</span></div><div class="stat-divider"></div><div class="stat-item"><span class="stat-label">Total Marks</span><span class="stat-value"><span id="other-totalMarksObtained">0</span><span id="other-totalMaxMarks" class="stat-sub-value">/ 0</span></span></div></div>
                   </div>
-                  <div class="text-center fade-in-on-scroll mt-4" style="margin-top: 1.5rem;">
-                    <button id="other-fetchAttendanceBtn" class="btn btn-success-action btn-wide"><i class="fa-solid fa-clipboard-user me-2"></i>Attendance System</button>
-                  </div>
-                  <div class="card card-modern mt-4 fade-in-on-scroll" id="otherGpaChartContainer" style="display: none;">
-                    <div class="card-header p-0">
-                      <a href="#otherGpaChartCollapse" class="d-block text-decoration-none p-3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="otherGpaChartCollapse">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <h4 class="mb-0 text-body"><i class="fa-solid fa-chart-line me-2"></i>GPA Trend</h4>
-                          <i class="fa-solid fa-chevron-down text-body" id="otherGpaChartChevron"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="collapse" id="otherGpaChartCollapse">
-                      <div class="card-body">
-                        <canvas id="otherGpaTrendChart"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="action-buttons-aligned justify-content-lg-between w-100 fade-in-on-scroll">
-                    <button id="other-downloadPdfBtn" class="btn btn-pdf-download"><i class="fa-solid fa-file-pdf me-2"></i>Download PDF</button>
-                    <button id="other-addForecastSemesterBtn" class="btn btn-info-action"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Forecast Semester</button>
-                  </div>
-                  <div class="semester-results-container">
-                    <div id="other-semesterResults" class="semester-grid"></div>
-                  </div>
+                  <div class="text-center fade-in-on-scroll" style="margin-top: 1.5rem;"><button id="other-fetchAttendanceBtn" class="btn btn-success-action" style="min-width: 220px; border-radius: var(--radius-btn);"><i class="fa-solid fa-clipboard-user me-2"></i>Attendance System</button></div>
+                  <div class="card card-modern mt-4 fade-in-on-scroll" id="otherGpaChartContainer" style="display: none;"><div class="card-header p-0"><a href="#otherGpaChartCollapse" class="d-block text-decoration-none p-3" data-bs-toggle="collapse" role="button"><div class="d-flex justify-content-between align-items-center"><h4 class="mb-0 text-body"><i class="fa-solid fa-chart-line me-2"></i>GPA Trend</h4><i class="fa-solid fa-chevron-down text-body" id="otherGpaChartChevron"></i></div></a></div><div class="collapse" id="otherGpaChartCollapse"><div class="card-body"><canvas id="otherGpaTrendChart"></canvas></div></div></div>
+                  <div class="action-buttons-aligned justify-content-lg-between w-100 fade-in-on-scroll"><button id="other-downloadPdfBtn" class="btn btn-pdf-download"><i class="fa-solid fa-file-pdf me-2"></i>Download PDF</button><button id="other-addForecastSemesterBtn" class="btn btn-info-action"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Forecast Semester</button></div>
+                  <div class="semester-results-container"><div id="other-semesterResults" class="semester-grid"></div></div>
                 </div>
               </div>
             </div>
@@ -827,7 +477,9 @@
               </div>
               <div class="collapse" id="statusLogCollapse">
                 <div class="card-body p-4">
-                  <div class="status-log" id="statusLog"><div class="status-line status-info">Ready to fetch your results. Enter your registration number and click "Fetch Result".</div></div>
+                  <div class="status-log" id="statusLog">
+                    <div class="status-line status-info">Ready to fetch your results. Enter your registration number and click "Fetch Result".</div>
+                  </div>
                   <div class="log-section center-buttons mt-3">
                     <button id="downloadLogBtn" class="btn btn-secondary-action rounded-pill"><i class="fa-solid fa-file-lines me-2"></i>Download Log</button>
                     <button id="clearLogBtn" class="btn btn-danger-action rounded-pill"><i class="fa-solid fa-trash me-2"></i>Clear Log</button>
@@ -848,73 +500,25 @@
           <p class="lead text-muted">The most advanced and feature-rich cgpa calculation tool for UAF students</p>
         </div>
         <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-card fade-in-on-scroll">
-              <div class="feature-icon"><i class="fas fa-robot"></i></div>
-              <h5>Instant & Automatic</h5>
-              <p class="text-muted">Enter your registration number to get your complete, calculated academic record from the UAF portal in seconds. No manual entry needed.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-card fade-in-on-scroll">
-              <div class="feature-icon"><i class="fas fa-edit"></i></div>
-              <h5>Forecast & Edit</h5>
-              <p class="text-muted">Accurately forecast your CGPA by adding custom courses, deleting semesters, or simply dragging-and-dropping subjects between semesters.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-card fade-in-on-scroll">
-              <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
-              <h5>Premium PDF Export</h5>
-              <p class="text-muted">Generate a beautifully designed, professional transcript of your results with a single click. Perfect for your personal academic records.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-card fade-in-on-scroll">
-              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-              <h5>Secure & Personal</h5>
-              <p class="text-muted">Requires no password and never stores your data on our servers. Save multiple profiles securely in your own browser and enjoy a modern interface with dark mode.</p>
-            </div>
-          </div>
+          <div class="col-md-6 col-lg-3"><div class="feature-card fade-in-on-scroll"><div class="feature-icon"><i class="fas fa-robot"></i></div><h5>Instant & Automatic</h5><p class="text-muted">Enter your registration number to get your complete, calculated academic record from the UAF portal in seconds. No manual entry needed.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="feature-card fade-in-on-scroll"><div class="feature-icon"><i class="fas fa-edit"></i></div><h5>Forecast & Edit</h5><p class="text-muted">Accurately forecast your CGPA by adding custom courses, deleting semesters, or simply dragging-and-dropping subjects between semesters.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="feature-card fade-in-on-scroll"><div class="feature-icon"><i class="fas fa-file-pdf"></i></div><h5>Premium PDF Export</h5><p class="text-muted">Generate a beautifully designed, professional transcript of your results with a single click. Perfect for your personal academic records.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="feature-card fade-in-on-scroll"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h5>Secure & Personal</h5><p class="text-muted">Requires no password and never stores your data on our servers. Save multiple profiles securely in your own browser and enjoy a modern interface with dark mode.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="py-5 bg-light" id="how-it-works">
+    <section class="py-5" id="how-it-works">
       <div class="container">
         <div class="text-center mb-5 fade-in-on-scroll">
           <h2 class="fw-bold">How to Use <span class="gradient-text">UAF CGPA Calculator</span></h2>
           <p class="lead text-muted">Calculate your University of Agriculture Faisalabad (UAF) CGPA in 4 simple steps</p>
         </div>
         <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card card-modern h-100 text-center p-4 fade-in-on-scroll">
-              <div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-id-card"></i></div></div>
-              <h4 class="fw-bold">Step 1: Enter Registration Number</h4>
-              <p class="text-muted">Enter your UAF registration number (e.g., 2020-ag-1234) in the input field. Our calculator supports all UAF departments including Agriculture, Sciences, and Engineering.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-modern h-100 text-center p-4 fade-in-on-scroll">
-              <div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-cloud-download-alt"></i></div></div>
-              <h4 class="fw-bold">Step 2: Fetch Your Results</h4>
-              <p class="text-muted">Click "Fetch Result" and our system will automatically connect to UAF LMS and Attendance System to retrieve your complete academic record securely.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-modern h-100 text-center p-4 fade-in-on-scroll">
-              <div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-calculator"></i></div></div>
-              <h4 class="fw-bold">Step 3: View Your CGPA</h4>
-              <p class="text-muted">Instantly view your calculated CGPA, GPA, percentage, and semester-wise breakdown. Download a professional PDF transcript with one click.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-modern h-100 text-center p-4 fade-in-on-scroll">
-              <div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-edit"></i></div></div>
-              <h4 class="fw-bold">Step 4: Edit & Forecast</h4>
-              <p class="text-muted">Easily edit CGPA by importing from the Attendance System, adding custom courses, or forecasting future grades.</p>
-            </div>
-          </div>
+          <div class="col-md-4"><div class="card card-modern h-100 text-center p-4 fade-in-on-scroll"><div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-id-card"></i></div></div><h4 class="fw-bold">Step 1: Enter Registration Number</h4><p class="text-muted">Enter your UAF registration number (e.g., 2020-ag-1234) in the input field. Our calculator supports all UAF departments including Agriculture, Sciences, and Engineering.</p></div></div>
+          <div class="col-md-4"><div class="card card-modern h-100 text-center p-4 fade-in-on-scroll"><div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-cloud-download-alt"></i></div></div><h4 class="fw-bold">Step 2: Fetch Your Results</h4><p class="text-muted">Click "Fetch Result" and our system will automatically connect to UAF LMS and Attendance System to retrieve your complete academic record securely.</p></div></div>
+          <div class="col-md-4"><div class="card card-modern h-100 text-center p-4 fade-in-on-scroll"><div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-calculator"></i></div></div><h4 class="fw-bold">Step 3: View Your CGPA</h4><p class="text-muted">Instantly view your calculated CGPA, GPA, percentage, and semester-wise breakdown. Download a professional PDF transcript with one click.</p></div></div>
+          <div class="col-md-4"><div class="card card-modern h-100 text-center p-4 fade-in-on-scroll"><div class="mb-3"><div class="display-4" style="color: var(--brand);"><i class="fas fa-edit"></i></div></div><h4 class="fw-bold">Step 4: Edit & Forecast</h4><p class="text-muted">Easily edit CGPA by importing from the Attendance System, adding custom courses, or forecasting future grades.</p></div></div>
         </div>
       </div>
     </section>
@@ -926,30 +530,9 @@
           <p class="lead text-muted">A clear, precise breakdown of how your CGPA is calculated.</p>
         </div>
         <div class="row g-4 g-lg-5 justify-content-center">
-          <div class="col-lg-6">
-            <div class="card card-modern h-100 fade-in-on-scroll">
-              <div class="card-body p-4 p-md-5">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="feature-icon" style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0;"><i class="fa-solid fa-calculator"></i></div>
-                  <h4 class="fw-bold mb-0">The Core CGPA Formula</h4>
-                </div>
-                <p class="text-muted">This calculator uses the <strong>official UAF 4.0 grading scale</strong>. Your CGPA is determined by a simple, powerful formula:</p>
-                <div class="alert alert-info text-center" style="background-color: rgba(122, 106, 216, 0.05); border-color: rgba(122, 106, 216, 0.2); color: var(--text);">
-                  <strong class="d-block" style="font-size: 1.1rem; color: var(--brand);">CGPA = Total Quality Points ÷ Total Credit Hours</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-10">
-            <div class="card card-modern fade-in-on-scroll h-100">
-              <div class="card-body p-4">
-                <h4 class="fw-bold mb-3 d-flex align-items-center gap-2"><i class="fa-solid fa-table me-1" style="color: var(--brand);"></i>Official UAF Quality Point Table</h4>
-                <div class="zoomable-image-container" id="qpTableContainer">
-                  <img src="/assets/images/quality-point-table-uaf-cgpa-calculator-saqlain.webp" id="qpTableImage" alt="Official UAF Quality Point Table" title="UAF Quality Point Table by M Saqlain">
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-lg-6"><div class="card card-modern h-100 fade-in-on-scroll"><div class="card-body p-4 p-md-5"><div class="d-flex align-items-center mb-3"><div class="feature-icon" style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0;"><i class="fa-solid fa-calculator"></i></div><h4 class="fw-bold mb-0">The Core CGPA Formula</h4></div><p class="text-muted">This calculator uses the <strong>official UAF 4.0 grading scale</strong>. Your CGPA is determined by a simple, powerful formula:</p><div class="alert alert-info text-center" style="background-color: rgba(122, 106, 216, 0.05); border-color: rgba(122, 106, 216, 0.2); color: var(--text);"><strong class="d-block" style="font-size: 1.1rem; color: var(--brand);">CGPA = Total Quality Points ÷ Total Credit Hours</strong></div><hr class="my-4"><h5 class="fw-bold mb-3">How are <span class="gradient-text">Quality Points</span> Calculated?</h5><p class="text-muted mb-0">For each course, the grade (A, B, C, D, F) you receive is converted into Grade Points (from 4.0 to 0.0). These are then multiplied by the course's credit hours to find the Quality Points (QP) for that single course.</p></div></div></div>
+          <div class="col-lg-6"><div class="card card-modern h-100 fade-in-on-scroll"><div class="card-body p-4 p-md-5"><div class="d-flex align-items-center mb-3"><div class="feature-icon" style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0;"><i class="fa-solid fa-star"></i></div><h4 class="fw-bold mb-0">Key Calculation Features</h4></div><p class="text-muted">Our tool automates the most complex parts of the UAF grading policy for you:</p><ul class="list-unstyled m-0"><li class="d-flex align-items-start gap-3 mb-3"><i class="fa-solid fa-check-circle text-success fa-lg mt-1"></i><div><strong class="d-block">Repeated Courses Handled</strong><span class="text-muted small">Only the <strong>highest grade attempt</strong> for any repeated course is included in the final CGPA calculation. All other attempts are automatically excluded.</span></div></li><li class="d-flex align-items-start gap-3 mb-3"><i class="fa-solid fa-check-circle text-success fa-lg mt-1"></i><div><strong class="d-block">Comprehensive System Sync</strong><span class="text-muted small">Pulls data from both the <strong>UAF LMS</strong> and the <strong>Attendance System</strong> to build the most complete picture of your academic record.</span></div></li><li class="d-flex align-items-start gap-3"><i class="fa-solid fa-check-circle text-success fa-lg mt-1"></i><div><strong class="d-block">Works for All Faculties</strong><span class="text-muted small">The calculation logic is standard across all UAF departments, from Agriculture and Sciences to Engineering and Veterinary Sciences.</span></div></li></ul></div></div></div>
+          <div class="col-md-10"><div class="card card-modern fade-in-on-scroll h-100"><div class="card-body p-4"><h4 class="fw-bold mb-3 d-flex align-items-center gap-2"><i class="fa-solid fa-table me-1" style="color: var(--brand);"></i> Official UAF Quality Point Table</h4><p class="text-body-secondary mb-3">Refer to the official UAF Quality Point Table below to understand how marks are converted into quality points and grades. Click or tap the image to zoom in and drag for details.</p><div class="zoomable-image-container" id="qpTableContainer"><img src="/assets/images/quality-point-table-uaf-cgpa-calculator-saqlain.webp" id="qpTableImage" alt="Official UAF Quality Point Table by M Saqlain" title="UAF Quality Point Table by M Saqlain" style="width:100%;height:auto;border-radius:0.75rem;"></div><p class="text-body-secondary small mt-3 mb-0">*Table developed by M Saqlain based on official UAF academic regulations.</p></div></div></div>
         </div>
       </div>
     </section>
@@ -963,64 +546,10 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="accordion" id="faqAccordion">
-              <div class="accordion-item card-modern mb-3 fade-in-on-scroll">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">How does the UAF CGPA Calculator work?</button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body"><strong>Our CGPA Calculator</strong> securely connects to the public UAF LMS portal using your registration number. It fetches your official results, processes the grades and credit hours according to the official UAF grading formula, and instantly calculates your precise Semester GPA and Cumulative GPA (CGPA).</div>
-                </div>
+              <div class="accordion-item card-modern mb-3 fade-in-on-scroll"><h2 class="accordion-header" id="headingOne"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">How does the UAF CGPA Calculator work?</button></h2><div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body"><strong>Our CGPA Calculator</strong> securely connects to the public UAF LMS portal using your registration number. It fetches your official results, processes the grades and credit hours according to the official UAF grading formula, and instantly calculates your precise Semester GPA and Cumulative GPA (CGPA).</div></div></div>
+              <div class="accordion-item card-modern mb-3 fade-in-on-scroll"><h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Is it safe to use my registration number?</button></h2><div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body"><strong>Yes, This CGPA Calculator by M Saqlain is completely safe.</strong> The calculator only requires your registration number, not your password. Your information is used only for fetching your result for the current session and is never stored or shared. The connection is secure and private.</div></div></div>
+              <div class="accordion-item card-modern mb-3 fade-in-on-scroll"><h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">Can I use this calculator for other universities?</button></h2><div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">This calculator is specifically designed for the students of the <strong>University of Agriculture Faisalabad (UAF)</strong>. It uses UAF's unique grading system and connects directly to the UAF LMS, so it will not work for other universities.</div></div></div>
               </div>
-              <div class="accordion-item card-modern mb-3 fade-in-on-scroll">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Is it safe to use my registration number?</button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body"><strong>Yes, This CGPA Calculator by M Saqlain is completely safe.</strong> The calculator only requires your registration number, not your password. Your information is used only for fetching your result for the current session and is never stored or shared. The connection is secure and private.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5" id="testimonials">
-      <div class="container">
-        <div class="text-center mb-5 fade-in-on-scroll">
-          <h2 class="fw-bold">What UAF Students Say About <span class="gradient-text">M Saqlain's Calculator</span></h2>
-          <p class="lead text-muted">Trusted by over 50,000 students across all UAF departments</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card card-modern h-100 p-4 fade-in-on-scroll">
-              <div class="mb-3"><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i></div>
-              <p class="mb-3">"The <strong>best UAF CGPA calculator</strong> I've used! <strong>Saqlain's tool</strong> saved me hours of manual calculation. The attendance system integration is a game-changer!"</p>
-              <div class="d-flex align-items-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;"><strong>AA</strong></div>
-                <div><strong>Ahmad Ali</strong><div class="small text-muted">BS Agriculture, Batch 2021</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-modern h-100 p-4 fade-in-on-scroll">
-              <div class="mb-3"><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i></div>
-              <p class="mb-3">"Finally, a <strong>UAF calculator</strong> that handles repeated courses correctly! <strong>M Saqlain</strong> really understood our needs. The PDF download feature is amazing!"</p>
-              <div class="d-flex align-items-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;"><strong>SF</strong></div>
-                <div><strong>Sarah Fatima</strong><div class="small text-muted">BS Chemistry, Batch 2020</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-modern h-100 p-4 fade-in-on-scroll">
-              <div class="mb-3"><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i><i class="fa-solid fa-star" style="color: #ffc107;"></i></div>
-              <p class="mb-3">"I've recommended <strong>UAF CGPA Calculator Saqlain</strong> to my entire batch! It's accurate, fast, and the forecasting feature helps me plan my grades perfectly."</p>
-              <div class="d-flex align-items-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;"><strong>MH</strong></div>
-                <div><strong>Muhammad Hamza</strong><div class="small text-muted">BS Engineering, Batch 2022</div></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1033,7 +562,7 @@
             <div class="col-lg-4 about-sidebar bg-light bg-opacity-50 border-end border-light-subtle d-flex flex-column align-items-center text-center p-4 p-md-5">
               <div class="position-relative mb-4">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary rounded-circle blur-xl opacity-25" style="filter: blur(20px);"></div>
-                <img src="assets/images/developer-uaf-cgpa-calculator-m-saqlain.webp" alt="Muhammad Saqlain - Creator of UAF CGPA Calculator Saqlain" class="rounded-circle shadow-lg position-relative border border-4 border-white developer-img" />
+                <img src="assets/images/developer-uaf-cgpa-calculator-m-saqlain.webp" alt="Muhammad Saqlain" class="rounded-circle shadow-lg position-relative border border-4 border-white" style="width: 160px; height: 160px; object-fit: cover;" />
               </div>
               <h3 class="fw-bold mb-1 gradient-text">Muhammad Saqlain</h3>
               <p class="badge bg-primary-subtle text-primary rounded-pill mb-3 px-3">UAF Alumnus (2020-2024)</p>
@@ -1052,7 +581,6 @@
                 <div class="col-md-6"><div class="about-feature-box d-flex gap-3 align-items-start p-3 rounded-4 bg-white shadow-sm border border-light h-100"><div class="feature-icon bg-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="fa-solid fa-server"></i></div><div><h6 class="fw-bold mb-1">LMS UAF Integration</h6><p class="small text-muted mb-0">Seamlessly fetches data from <strong>LMS UAF</strong> portals.</p></div></div></div>
                 <div class="col-md-6"><div class="about-feature-box d-flex gap-3 align-items-start p-3 rounded-4 bg-white shadow-sm border border-light h-100"><div class="feature-icon bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="fa-solid fa-check-double"></i></div><div><h6 class="fw-bold mb-1">Accuracy First</h6><p class="small text-muted mb-0">Uses the official <strong>UAF CGPA Calculator Saqlain</strong> algorithm.</p></div></div></div>
               </div>
-              <div class="alert about-quote-box alert-light border-start border-4 border-primary shadow-sm"><div class="d-flex"><i class="fa-solid fa-quote-left text-primary opacity-25 fa-2x me-3"></i><div><p class="fst-italic mb-0 text-muted small">"My goal was to create the ultimate <strong>LMS UAF CGPA Calculator</strong> that handles repeated courses and attendance data automatically, saving students time and confusion."</p><footer class="blockquote-footer mt-2 mb-0">M Saqlain</footer></div></div></div>
             </div>
           </div>
         </div>
@@ -1079,7 +607,7 @@
             <div class="h-100 p-4 p-lg-5 rounded-4" style="background:linear-gradient(180deg, rgba(122,106,216,.15), rgba(122,106,216,.05));">
               <h5 class="fw-bold">Developer</h5>
               <div class="d-flex align-items-center gap-3 mt-2">
-                <img src="assets/images/developer-uaf-cgpa-calculator-m-saqlain.webp" alt="Muhammad Saqlain - Developer of UAF CGPA Calculator" class="rounded-circle" width="86" height="86" />
+                <img src="assets/images/developer-uaf-cgpa-calculator-m-saqlain.webp" alt="Muhammad Saqlain" class="rounded-circle" width="86" height="86" />
                 <div>
                   <div class="fw-semibold">Muhammad Saqlain</div><div class="text-body-secondary small">BS Chemistry (2020–2024)</div>
                   <div class="d-flex gap-3 mt-2">
@@ -1095,70 +623,32 @@
         </div>
       </div>
     </section>
+
+    <div class="modal fade course-details-modal" id="courseDetailsModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="courseDetailsModalTitle">Course Details</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body" id="courseDetailsModalBody"></div><div class="modal-footer"><button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Close</button></div></div></div></div>
+    <div class="modal fade" id="addCourseModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Add Custom Course</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><form id="addCourseForm"><input type="hidden" id="addCourseSemester"><div class="mb-3"><label class="form-label">Course Code</label><input type="text" class="form-control" id="courseCode" required></div><div class="mb-3"><label class="form-label">Title</label><input type="text" class="form-control" id="courseTitle" required></div><div class="row"><div class="col-6 mb-3"><label class="form-label">CH</label><select class="form-select" id="creditHours"><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div><div class="col-6 mb-3"><label class="form-label">Marks</label><input type="number" class="form-control" id="courseMarks" min="0" max="100" required></div></div></form></div><div class="modal-footer"><button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button><button type="button" class="btn btn-primary-action rounded-pill" id="saveCourseBtn">Add Course</button></div></div></div></div>
+    <div class="modal fade" id="renameProfileModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Rename Profile</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><input type="text" class="form-control" id="newProfileName"></div><div class="modal-footer"><button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button><button type="button" class="btn btn-primary-action rounded-pill" id="saveProfileNameBtn">Save</button></div></div></div></div>
+    <div class="modal fade" id="renameSemesterModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Rename Semester</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><input type="text" class="form-control" id="newSemesterName"></div><div class="modal-footer"><button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button><button type="button" class="btn btn-primary-action rounded-pill" id="saveSemesterNameBtn">Save</button></div></div></div></div>
+    <div class="modal fade" id="attendanceImportModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Import Courses</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="d-flex justify-content-between align-items-center mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="toggleSelectAllCourses"><label class="form-check-label">Select All</label></div><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="toggleAllCourses"><label class="form-check-label">Show Existing</label></div></div><div id="attendanceCourseList"></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button><button type="button" class="btn btn-primary-action rounded-pill" id="importAttendanceCoursesBtn">Import Selected</button></div></div></div></div>
+    <div class="modal fade" id="profileManagerModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Profile Manager</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="profile-manager-header"><h6 class="mb-0">Manage Profiles</h6><div class="profile-manager-stats"><span id="profileCountStat">0 Profiles</span></div></div><div class="profile-manager-toolbar"><div class="form-check"><input class="form-check-input" type="checkbox" id="selectAllProfiles"><label class="form-check-label">Select All</label></div><button class="btn btn-danger-action btn-sm ms-2" id="deleteSelectedBtn" disabled>Delete Selected</button><div class="ms-auto d-flex gap-2"><button class="btn btn-success-action btn-sm" id="importProfilesBtnModal">Import</button><button class="btn btn-info-action btn-sm" id="exportProfilesBtnModal">Export</button></div></div><ul class="profile-list" id="profileManagerList"></ul></div></div></div></div>
+    <div class="modal fade confirmation-modal" id="bedConfirmationModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center"><i class="fa-solid fa-graduation-cap mb-3 text-primary fs-1"></i><h5>B.Ed. Courses Detected</h5><p>Have you enrolled in the B.Ed. program?</p></div><div class="modal-footer justify-content-center"><button class="btn btn-secondary-action rounded-pill" id="bedConfirmNo">No</button><button class="btn btn-primary-action rounded-pill" id="bedConfirmYes">Yes</button></div></div></div></div>
+    <div class="modal fade confirmation-modal" id="confirmationModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"><div class="modal-dialog modal-dialog-centered modal-sm"><div class="modal-content"><div class="modal-body text-center"><h5 id="confirmationModalTitle">Are you sure?</h5><p id="confirmationModalBody">Action cannot be undone.</p></div><div class="modal-footer justify-content-center"><button class="btn btn-secondary-action rounded-pill" data-bs-dismiss="modal">Cancel</button><button class="btn btn-danger-action rounded-pill" id="confirmationConfirmBtn">Confirm</button></div></div></div></div>
+    <div class="modal fade" id="restrictedAccessModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow-lg"><div class="modal-header border-0 bg-danger text-white"><h5 class="modal-title">Restricted Access</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body p-4 text-center"><p class="text-muted">Enter Pass Key.</p><input type="password" class="form-control" id="restrictedPassKey" placeholder="Pass Key"><div id="passKeyError" class="text-danger small mt-2" style="display:none;">Incorrect Pass Key</div></div><div class="modal-footer justify-content-center"><button type="button" class="btn btn-danger rounded-pill" id="submitPassKeyBtn">Unlock</button></div></div></div></div>
+
+    <div id="imageLightbox" class="image-lightbox"><button id="lightboxClose" class="lightbox-close-btn"><i class="fa-solid fa-times"></i></button><div id="lightboxContent" class="lightbox-content"></div></div>
   </main>
 
   <footer class="premium-footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <a class="footer-logo" href="/">
-            <span class="badge">UAF</span>
-            <span class="gradient-text">CGPA Calculator</span>
-          </a>
-          <p class="footer-description">The #1 automatic cgpa calculator for University of Agriculture Faisalabad (UAF) students. Developed by M Saqlain to be accurate, fast, and free.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/UAFChemist.Rustam" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://x.com/M_Saqlain_Akbar" target="_blank" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/muhammad-saqlain-akbar/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 offset-lg-1">
-          <h5 class="footer-heading">Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Auto-Calculator">Calculator</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-7">
-          <h5 class="footer-heading">About</h5>
-          <ul class="footer-links">
-            <li><a href="#about-developer-premium">About M Saqlain</a></li>
-            <li><a href="#contact-us">Contact Developer</a></li>
-            <li><a href="#uaf-grading-info">Grading System</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-12 mt-4 mt-lg-0"> <h5 class="footer-heading">Disclaimer</h5>
-          <p class="footer-disclaimer">This is an unofficial, third-party tool developed by a UAF alumnus. It is not affiliated with, endorsed, or supported by the University of Agriculture Faisalabad (UAF). Always verify your official results with the university.</p>
-        </div>
+        <div class="col-lg-4"><a class="footer-logo" href="/"><span class="badge">UAF</span> <span class="gradient-text">CGPA Calculator</span></a><p class="footer-description">The #1 automatic cgpa calculator for University of Agriculture Faisalabad (UAF) students. Developed by M Saqlain to be accurate, fast, and free.</p><div class="social-links"><a href="https://www.facebook.com/UAFChemist.Rustam" target="_blank"><i class="fa-brands fa-facebook"></i></a><a href="https://x.com/M_Saqlain_Akbar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.linkedin.com/in/muhammad-saqlain-akbar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div></div>
+        <div class="col-lg-2 col-md-3 offset-lg-1"><h5 class="footer-heading">Quick Links</h5><ul class="footer-links"><li><a href="#Home">Home</a></li><li><a href="#Auto-Calculator">Calculator</a></li><li><a href="#features">Features</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+        <div class="col-lg-2 col-md-7"><h5 class="footer-heading">About</h5><ul class="footer-links"><li><a href="#about-developer-premium">About M Saqlain</a></li><li><a href="#contact-us">Contact Developer</a></li><li><a href="#uaf-grading-info">Grading System</a></li></ul></div>
+        <div class="col-lg-3 col-md-12 mt-4 mt-lg-0"><h5 class="footer-heading">Disclaimer</h5><p class="footer-disclaimer">This is an unofficial, third-party tool developed by a UAF alumnus. Not affiliated with UAF.</p></div>
       </div>
-      <div class="footer-bottom-bar">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="footer-copyright">
-                <p class="mb-1">© 2025 Muhammad Saqlain. All rights reserved.</p>
-                <p class="mb-0">Trusted by 50,000+ UAF Students | Developed by <a href="#about-developer-premium">M Saqlain</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="footer-bottom-bar"><div class="container"><div class="row"><div class="col-12"><div class="footer-copyright"><p class="mb-1">© 2025 Muhammad Saqlain. All rights reserved.</p><p class="mb-0">Trusted by 50,000+ UAF Students | Developed by <a href="#about-developer-premium">M Saqlain</a></p></div></div></div></div></div>
     </div>
   </footer>
 
-  <div id="imageLightbox" class="image-lightbox">
-    <button id="lightboxClose" class="lightbox-close-btn" title="Close"><i class="fa-solid fa-times"></i></button>
-    <div id="lightboxContent" class="lightbox-content"></div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
-  <script src="app.js"></script>
 </body>
 </html>
