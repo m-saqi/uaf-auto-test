@@ -104,6 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
       initModalZIndexHandlers(); 
       initMenuAutoCollapse();
 
+      // --- FIX: Initialize Attendance Buttons Here ---
+      setupAttendanceButton(); 
+      // -----------------------------------------------
+
       const bedModalEl = document.getElementById('bedConfirmationModal');
       if (bedModalEl) {
           bedConfirmationModal = new bootstrap.Modal(bedModalEl);
@@ -1862,3 +1866,4 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.add('status-loaded');
   }
 });
+
